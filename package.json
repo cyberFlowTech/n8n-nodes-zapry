@@ -1,25 +1,25 @@
 {
-	"name": "n8n-nodes-turnkey",
-	"version": "0.0.5",
-	"description": "Turnkey nodes for n8n ",
+	"name": "n8n-nodes-zapry",
+	"version": "0.0.1",
+	"description": "Zapry nodes for n8n ",
 	"keywords": [
 		"n8n-community-node-package",
-		"turnkey",
-		"turnkey-client",
-		"turnkey-client-node",
-		"turnkey-client-n8n",
-		"turnkey-client-n8n-node",
-		"turnkey-client-n8n-node-package"
+		"zapry",
+		"zapry-client",
+		"zapry-client-node",
+		"zapry-client-n8n",
+		"zapry-client-n8n-node",
+		"zapry-client-n8n-node-package"
 	],
 	"license": "MIT",
 	"homepage": "",
 	"author": {
 		"name": "AI",
-		"email": "ai@liberfi.io"
+		"email": "ai@cyberflow.io"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/liberfi-io/n8n-nodes-turnkey.git"
+		"url": "https://github.com/cyberFlowTech/n8n-nodes-zapry.git"
 	},
 	"main": "index.js",
 	"scripts": {
@@ -37,28 +37,34 @@
 	"n8n": {
 		"n8nNodesApiVersion": 1,
 		"credentials": [
-			"dist/credentials/TurnkeyApi.credentials.js"
+			"dist/credentials/ZapryApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/Turnkey/Turnkey.node.js"
+			"dist/nodes/Zapry/Zapry.node.js",
+			"dist/nodes/Zapry/ZapryTrigger.node.js"
 		]
 	},
 	"devDependencies": {
 		"@types/jest": "^29.5.14",
+		"@types/lodash": "^4.17.20",
+		"@types/luxon": "^3.7.1",
+		"@types/mime-types": "^3.0.1",
 		"@types/node": "^24.0.13",
+		"@types/sanitize-html": "^2.16.0",
 		"@typescript-eslint/parser": "~8.36",
 		"eslint": "^8.57.1",
 		"eslint-plugin-n8n-nodes-base": "^1.11.0",
 		"gulp": "^5.0.1",
 		"jest": "^29.7.0",
+		"jest-mock-extended": "^4.0.0",
 		"n8n-workflow": "*",
 		"prettier": "^3.6.2",
 		"ts-jest": "^29.4.0",
 		"typescript": "~5.8.3"
 	},
 	"dependencies": {
-		"@turnkey/api-key-stamper": "^0.4.7",
-		"@turnkey/http": "^3.11.0",
+		"lodash": "^4.17.21",
+		"mime-types": "^3.0.1",
 		"zod": "3.24.0",
 		"zod-to-json-schema": "^3.24.6"
 	},
@@ -67,6 +73,8 @@
 		"zod": "3.24.0"
 	},
 	"peerDependencies": {
-		"n8n-workflow": "*"
+		"luxon": "*",
+		"n8n-workflow": "*",
+		"sanitize-html": "*"
 	}
 }

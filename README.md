@@ -1,8 +1,8 @@
-[![Verified on MseeP](https://mseep.ai/badge.svg)](https://mseep.ai/app/bd76f121-1c8f-4f5d-9c65-1eac5d81b6af)
+[![N8N Community Node](https://img.shields.io/badge/n8n-community-brightgreen)](https://n8n.io/integrations/community-nodes/)
 
-# n8n-nodes-turnkey
+# n8n-nodes-zapry
 
-This is an n8n community node that lets you interact with Turnkey services in your n8n workflows.
+This is an n8n community node that lets you interact with Zapry services in your n8n workflows.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
@@ -18,43 +18,45 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 
 ## Credentials
 
-The Turnkey node requires API key credentials:
+The Zapry node requires bot credentials:
 
-- **API Public Key**: Your Turnkey API public key
-- **API Private Key**: Your Turnkey API private key
+- **Bot Token**: Your Zapry Bot Token obtained from @BotFather
 
 ## Operations
 
-The Turnkey node supports the following operations:
+The Zapry node supports the following operations:
 
-### Sign Transaction
-Sign a blockchain transaction using your Turnkey wallet.
+### Send Message
+Send a text message to a chat or user.
 
-### Create Wallet 
-Create a new wallet in your Turnkey organization.
+### Send Photo
+Send a photo to a chat or user.
 
-### Create Wallet Accounts
-Create new accounts within an existing wallet.
+### Send Document
+Send a document/file to a chat or user.
 
-### List Wallets
-Get a list of all wallets in your organization.
+### Get Updates
+Get updates/messages sent to your bot.
+
+### Get Chat Member
+Get information about a member in a chat.
 
 ## Example Usage
 
-To use the Turnkey node:
+To use the Zapry node:
 
-1. Add your API credentials
-2. Select an operation (e.g. Sign Transaction)
+1. Add your bot token credentials
+2. Select an operation (e.g. Send Message)
 3. Configure the required parameters:
-   - Organization ID
-   - Transaction type (Ethereum, Solana, or Tron)
-   - Unsigned transaction data
+   - Chat ID
+   - Message text
+   - Optional formatting parameters
 
 The node will execute the operation and return the results.
 
 ## Error Handling
 
 The node includes comprehensive error handling and will return clear error messages if:
-- Invalid credentials are provided
-- Required parameters are missing
+- Invalid bot token is provided
+- Required parameters are missing 
 - The API request fails
