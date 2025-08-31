@@ -262,7 +262,7 @@ export class ZapryTrigger implements INodeType {
 			const secret = getSecretToken.call(this);
 			const secretBuffer = Buffer.from(secret);
 			const headerSecretBuffer = Buffer.from(
-				String(headerData['x-zapry-bot-api-secret-token'] ?? ''),
+				String(headerData['x-bot-api-secret-token'] ?? ''),
 			);
 			if (
 				secretBuffer.byteLength !== headerSecretBuffer.byteLength ||
