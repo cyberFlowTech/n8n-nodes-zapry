@@ -46,7 +46,7 @@
 	},
 	"devDependencies": {
 		"@types/jest": "^29.5.14",
-		"@types/lodash": "^4.17.20",
+		"@types/lodash": "^4.17.21",
 		"@types/luxon": "^3.7.1",
 		"@types/mime-types": "^3.0.1",
 		"@types/node": "^24.0.13",
